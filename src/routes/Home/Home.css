@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant:600&display=swap');
+
+.home-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.landing-logo {
+    height: calc(100vh - 110px);
+    color: brown;
+    background: whitesmoke;
+    padding: 0 5px;
+    margin: 0;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    font-size: 125px;
+    transition: .73s;
+    font-family: 'Cormorant', serif;
+    font-weight: 600;
+}
+
+.landing-logo:hover {
+    background: black;
+    color: whitesmoke;
+}
+
+.beano-view {
+    justify-content: flex-end;
+}
+
+.logo-active {
+    background: black;
+    color: whitesmoke;
+}

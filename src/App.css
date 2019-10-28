@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900');
+
+root {
+  overflow-x: hidden;
+  overflow-y:hidden;
+}
+
+.App {
+  text-align: center;
+  width: 100vw;
+}
+
+.App-link {
+  color: rgb(87, 84, 66);
+}
+
+.App a {
+  text-decoration: none;
+  color: rgb(87, 84, 66);
+}
+
+/* navigation */
+
+nav > a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+
+nav > a:hover {
+  color: #000;
+}
+
+nav > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+nav > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.name:hover:before {
+  visibility: hidden;
+}
+
+.side-nav {
+  display: block;
+  position: absolute;
+  width: 40vw;
+  float: right;
+  background: #f3f1f1;
+  height: 100vh;
+  z-index: 100;
+  right: -40vw;
+  transition: .2s ease-in-out;
+}
+
+.mobile-name {
+  display: none;
+}
+
+nav {
+  width: 1000px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 35px 0;
+  margin: 0 auto;
+  height: 40px;
+  font-size: 1.3em;
+  letter-spacing: 1px;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+nav a {
+  position: relative;
+}
+
+nav a:hover {
+  color: rgb(115, 133, 153);
+}
+
+.nav-active {
+  font-weight: 700;
+}
+
+.active-side-nav {
+  right: 0;
+  box-shadow: -4px 0 29px #6b7886;
+}
+
+.name img {
+  width: 130px;
+  height: 130px;
+  position: relative;
+  right: 10px;
+}
+
+.side-nav-links {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 70px;
+  border-top: 1px solid rgb(161, 176, 192);
+  border-bottom: 1px solid rgb(161, 176, 192);
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.side-links {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  width: 40%;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+.side-links a {
+  padding: 8px 15px;
+  border-bottom: .5px solid rgb(224, 224, 224);
+}
+
+.side-nav-icons {
+  color: rgb(87, 84, 66);
+  width: 80%;
+  display: flex;
+  margin: 20px auto;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.sidecon {
+  border: 1px solid rgb(99, 106, 112);
+  padding: 18px;
+  border-radius: 50%;
+  margin: 0 4px;
+  width: 13px;
+  height: 13px;
+  display: flex;
+  align-items: center;
+}
+
+
+/* main */
+
+main {
+  background: mediumaquamarine;
+  height: 150vh;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .side-nav {
+    width: 90vw;
+    right: -90vw;
+  }
+  .active-side-nav {
+    right: 0;
+  }
+  .hamburger {
+    right: 0 !important;
+  }
+  .mobile-name {
+    display: block;
+    position: absolute;
+    left: 0;
+    color: black;
+    padding: 0 25px 10px;
+    margin: 0;
+  } 
+  .navbar a {
+    display: none;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
