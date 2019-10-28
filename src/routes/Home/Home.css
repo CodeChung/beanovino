@@ -35,3 +35,284 @@
     background: black;
     color: whitesmoke;
 }
+
+.landing-icon {
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+}
+
+.icon-active {
+    opacity: 1;
+}
+
+.icon-beano {
+    left: -60px;
+}
+
+.icon-vino {
+    right: 10px;
+}
+
+/* Steam animation https://twitter.com/vcmg */
+
+#wrap {
+    margin-top: 350px;
+    margin-left: 200px;
+  }
+  
+  .steam {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-top: -105px;
+    margin-left: 35px;
+    z-index: 0;
+    opacity: 0;
+  }
+  
+  #steam-one {
+    -webkit-animation: steam-one 4s ease-out infinite;
+    animation: steam-one 4s ease-out infinite;
+  }
+  
+  #steam-three {
+    -webkit-animation: steam-one 4s ease-out 1s infinite;
+    animation: steam-one 4s ease-out 1s infinite;
+  }
+  
+  @-webkit-keyframes steam-one {
+    0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+    100% {transform: translateY(-200px) translateX(-20px) scale(1); opacity: 0;}
+  }
+  
+  @keyframes steam-one {
+    0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+    100% {transform: translateY(-200px) translateX(-20px) scale(1); opacity: 0;}
+  }
+  
+  #steam-two {
+    -webkit-animation: steam-two 4s ease-out 0.5s infinite;
+    animation: steam-two 4s ease-out 0.5s infinite;
+  }
+  
+  #steam-four {
+    -webkit-animation: steam-two 4s ease-out 1.5s infinite;
+    animation: steam-two 4s ease-out 1.5s infinite;
+  }
+  
+  @-webkit-keyframes steam-two {
+    0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+    100% {transform: translateY(-200px) translateX(20px) scale(1); opacity: 0;}
+  }
+  
+  @keyframes steam-two {
+    0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+    100% {transform: translateY(-200px) translateX(20px) scale(1); opacity: 0;}
+  }
+  
+  #cup {
+    z-index: 1;
+  }
+  
+  #cup-body {
+    position: absolute;
+    height: 100px;
+    width: 150px;
+    border-radius: 0 0 75px 75px;
+    background-color: #fff;
+    margin: auto;
+    display: inline-block;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  #cup-shade {
+    position: relative;
+    height: 150px;
+    width: 100px;
+    background-color: #F3F3F3;
+    display: inline-block;
+    margin-left: 21%;
+    margin-top: -3px;
+    transform: rotate(50deg);
+    z-index: 1;
+  }
+  
+  #cup-handle {
+    position: relative;
+    height: 35px;
+    width: 40px;
+    border-radius: 150px 0 0 150px;
+    border: 7.5px solid #F3F3F3;
+    margin-bottom: 63px;
+    margin-left: 140px;
+    display: inline-block;
+    z-index: 10;
+    right: 190px;
+  }
+  
+  #saucer {
+    position: absolute;
+    height: 15px;
+    width: 150px;  
+    border-radius: 0 0 100px 100px;
+    background-color: #F9F9F9;
+    margin-top: -42px;
+    z-index: 2;
+  }
+  
+  #shadow {
+    height: 5px;
+    width: 150px;
+    border-radius: 50%;
+    margin-top: -45px;
+    background-color: #DC696F;
+  }
+  
+  #credit {
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+    margin-top: 70px;
+    left: 20px;
+  }
+  
+  a,
+  a:visited {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  a:focus,
+  a:hover {
+    color: #F4C6C8;
+  }
+
+/* wine glass */
+/* container */
+  .wineglass {
+    height: 100px;
+    position: relative;
+    top: 160px;
+    right: 80px;
+  }
+  /* bottom part */
+  .wineglass:after {
+    content: ''; 
+    position: absolute;
+    top: 134px;
+    left: 13px;
+    width: 60px;
+    height: 5px;
+    background: white;
+    box-shadow: 0 0 1px white;
+  }
+  /* body */
+  .top {
+    background: white;
+    width: 90px;
+    height: 105px;
+    border-radius: 0 0 50% 50%;
+    box-shadow: 0 0 1px white;
+  }
+  /* wine */
+  .top:before {
+    content: ''; 
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(transparent 50%, #F36E3E 50%);
+  }
+  .left .top:before {
+    animation: rotate2 2s linear infinite;
+  }
+  .right .top:before {
+    animation: rotate1 2s linear infinite;
+  }
+  .top:after {
+    content: ''; 
+    position: absolute;
+    top: 105px;
+    left: 40px;
+    width: 8px;
+    height: 30px;
+    background: white;
+    box-shadow: 0 0 1px white;
+  }
+  .left {
+    display: inline-block;
+    margin-right: 10px;
+    animation: rotate1 2s cubic-bezier(.39,1.52,.46,.92) infinite;
+  }
+  .right {
+    display: inline-block;
+    animation: rotate2 2s cubic-bezier(.39,1.52,.46,.92) infinite;
+  }
+  @keyframes rotate1{
+    0% {transform: rotate(0deg);}
+    50% {transform:rotate(22deg);}
+  }
+  @keyframes rotate2{
+    0% {transform:rotate(0deg);}
+    50% {transform:rotate(-22deg);}
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 70px;
+    height: 25px;
+    position: relative;
+    opacity: 0;
+    animation: 2s fadeInUp infinite linear 2s;
+    top: 150px;
+    right: 20px;
+  }
+  li {
+    width: 6px;
+    height: 15px;
+    background: white;
+    position: absolute;
+    box-shadow: 0 0 1px white;
+    transform-origin: bottom;
+  }
+  li:nth-child(1) {
+    left: 26px;
+    bottom: 5px;
+    transform: rotate(-35deg);
+  }
+  li:nth-child(2) {
+    left: 34px;
+    bottom: 8px;
+  }
+  li:nth-child(3) {
+    left: 42px;
+    bottom: 5px;
+    transform: rotate(35deg);
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: scaleY(1);
+    }
+    
+    33% {
+      opacity: 1;
+      transform: scaleY(1.4);
+    }
+    64% {
+       opacity: .1;
+       transform: scaleY(1);
+    }
+    100% { 
+      opacity: 0;
+      transform: scaleY(.3);
+    }
+  }
